@@ -1,0 +1,44 @@
+Na computação, existem vários tipos de alfabetos, assim como no português vai do A ao Z, na computação  e no CSSS existem outros como:
+
+*Computação*
+    1- Binário = 01
+
+    2- Númerico = 0123456789
+
+*CSS*
+    1- Hexadecimal = 0123456789-ABCDEF
+
+    2 - RGB (colocando o nome em inglês) = red, green, blue, yellow...
+
+    3- RGB (usando o alfa-numérico) = 0,1,2,3... até o máximo de 255.
+<br>
+
+*Padrão de posicionamento Hexadecimal*
+
+    Para marcar uma cor no dicionário Hexadecimal, devemos fazer o seguinte:
+
+    # _ _ - _ _ - _ _ = onde o primeiros par de caracteres se referem a tonalidade de cor de vermelho (red), o segundos par de caracteres se referem a tonalidade de cor de verde (green) e o terceiro par de caracteres se referem a tonalidade de cor de azul (blue).
+    Lembrando que para fazer esta atribuição, nao deve-se espaçar os valores, devem ficar como no exemplo a seguir:  (#00CC55).
+    Também devemos nos lembrar que, dentro destes pares hexadecimais que selecionam uma tonalidade de cor, o primeiro número representa a coordenada X na paleta de cores e o segundo número representa a coordenada Y na paleta de cores.
+<br>
+
+*Significado dos caracteres em alfabeto Hexadecimal*
+
+    No alfabeto Hexadecimal do CSS, estamos nos referindo às cores, no entanto, cada caractere do dicionário em questão representa uma coordenada de cor na paleta RGB (sempre em pares = red: X, Y; green: X, Y; blue: X, Y;), segue os exemplos:
+
+    0 = Ausência de tonalidade (o exemplo disso e a cor preta que é definida por = #000000;)
+
+    F = Máximo de tonalidade (o exemplo disso e a cor branca que é definida por = #FFFFFF;)
+
+    Lembrando que as cores seguem o *Padrão de posicionamento Hexadecimal* para atribuir as tonalidades.
+<br>
+
+*Como definir cores através do dicionário RGB utilizando o alfa-numérico*
+
+    No dicionário Alfa-numérico de RGB segue o mesmo conceito do Hexadecimal com algumas ressalvas, são elas:
+
+    1- Usa-se somente números de 0 à 255 para definir a tonalidade de cor desejada.
+
+    2- Usa-se RGB + 3 valores para definir uma cor, exemplo: { RGB(0,0,0) = cor preta... RGB(255,255,255) = cor branca} onde o primeiro valor se refere a tonalidade de vermelhor, o segundo valor se refere a tonalidade de verde, e o terceiro valor se refere a tonalidade de azul.
+    
+    *Lembrando que, 0 e a ausência de tonalidade e 255 e o máximo de tonalidade da cor referida. Sempre separe os valors com vírgulas: (0,0,0)*

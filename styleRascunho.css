@@ -1,0 +1,19 @@
+body{
+    background-color: #CCCCCC;
+}
+
+/*  O atributo indicado para a tag abaixo serve para centralizar o conteúdo de todas as tags "p" da página.*/
+p{
+    text-align: center;
+}
+
+/* Á seguir, temos um exemplo de como selecionar tags específicas do HTML para aplicar modificações em todas as tags "strongs" do código, uma forma de fazer isso e colocar o nome de uma tag antesrior antes do nome da tag que deseja estilizar. */
+em strong{
+    color: red;
+}
+
+/* Para fazer referência á um *id* no CSS, basta fazer o seguinte:
+#nome{
+
+}
+*/
