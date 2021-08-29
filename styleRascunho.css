@@ -1,5 +1,23 @@
 body{
+    
+}
+
+#banner{
+    /* Na atribuição abaixo, declaramos que a largura da imagem deve se ajustar à 100% da tela independentemente do tamanho da mesma, é possível obter o mesmo resultado usando outros atributos, tais como: margin (cria uma margem em volta do elemento referido ou, se for *margin-left* cria uma margem á esquerda do elemento e assim com todos os sentidos se citados 'left, right, top, bottom), padding (cria um espaçamento interno no elemento referido para que ele se ajuste ao tamanho solicitado, também pode variar em sentidos como o *margin*), entre outros. */
+    width: 100%;
+}
+
+.principal{
     background-color: #CCCCCC;
+    padding: 30px;
+}
+
+.titulo-principal{
+    padding-left: 20px;
+}
+
+.titulo-centralizado{
+    text-align: center;
 }
 
 /*  O atributo indicado para a tag abaixo serve para centralizar o conteúdo de todas as tags "p" da página.*/
@@ -7,13 +25,43 @@ p{
     text-align: center;
 }
 
-/* Á seguir, temos um exemplo de como selecionar tags específicas do HTML para aplicar modificações em todas as tags "strongs" do código, uma forma de fazer isso e colocar o nome de uma tag antesrior antes do nome da tag que deseja estilizar. */
+/* Quando vamos nos referenciar á um *id* do HTML, usamos (#) mais o nome que foi dado ao *id*, segue exemplo:*/
+#missao {
+    font-size: 20px;
+}
+
+/* Á seguir, temos um exemplo de como selecionar uma tag específica do HTML para não aplicar modificações em todas as tags "strongs" do código, uma forma de fazer isso e colocar o nome de uma tag anterior e depois nome da tag que deseja estilizar. */
 em strong{
     color: red;
 }
 
-/* Para fazer referência á um *id* no CSS, basta fazer o seguinte:
-#nome{
-
-}
+/* Existe formas de selecionar marcações específicas de nosso código de modo que não alteremos a estilização de outras tags com o mesmo nome, para isso uma forma de diferencia-las é criando um *id* (um identificador) para editar somente aquele *id* no CSS.   Para fazer referência á um *id* no CSS, basta fazer o seguinte: [ #nome do *id*{} ].
+    Só que quando queremos aplicas a mesma edição em várioas tags porém não em todas, seria muito trabalhoso criar
+*id's* em cada uma das tags desejadas visto que o *id* é uma referência única.
+    Tendo dito isso, uma solução que podemos usar é o conceito de classes do CSS *class*, assim podemos criar apenas 1 
+classe e utiliza-la várias vezes em nosso código tendo apenas que chama-la nas tags do HTML através de: (class="")
+    Para nos referenciar á uma classe no CSS usamos a seguinte sintaxe: [ .nome da classe {} ].
 */
+
+.itens{
+    font-style: italic;
+}
+
+.beneficios{
+    background-color: #FFFFFF;
+    padding: 20px;
+}
+
+/* Por padrão, o  HTML separa as tags uma das outras linha por linha com um comportamento chamado *block* isto é, ele realmente bloqueia outras tags daquela linha no intuito de ter uma formalização, e também existe o comportamento *inline*, neste indica que os conteúdos dentro daquela tag ficaram na mesma linha, dito isso, se precisarmos mudar isso, podemos especificar para aquela tag através do atributo *display* do CSS, que tipo de formção queremos, usamos isso para colocar uma imagem na mesma linha de um paragrafo ou listas por exemplo. dentro do atributo display damos o valor de: *inline-block* para que tudo fique um ao lado do outro como o exemplo a seguir.
+* Por padrão, o CSS alinha todos os itens para baixo, sendo assim ficará estranho se colocarmos uma imagem ao lado de uma lista pois a lista ficará lá embaixo, para concertarmos isto, usamos o atributo *vertical-align* para indicar onde querermos alinhar o conteúdo, o valor que damos no exemplo é *top* assim o conteúdo ficará alinha ao topo da tag.
+*/
+ul{
+    display: inline-block;
+    vertical-align: top;
+    width: 20%;
+    margin-right: 15%;
+}
+
+.imagembeneficios{
+    width: 50%;
+}

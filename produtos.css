@@ -1,0 +1,107 @@
+header {
+    background-color: #BBBBBB;
+    padding: 20px 0;
+}
+
+.caixa {
+    /* Na atribuição a seguir, indicamos que o ponto inicial da classe *.caixa* seja relativo ao tamanho atribuido abaixo. */
+    position: relative;
+    width: 940px;
+    /* Nesta atribuição é indicado no primeiro valor a margem de cima e baixo, e no segundo é indicado as margens laterais, quando é dado o valor *auto* as margens se ajustam automaticamente com a proporção da tela. */
+    margin: 0 auto;
+}
+
+nav {
+    /* Nesta atribuição, indicamos onde queremos que seja o ponto de inicio do conteúdo da tag *nav* indicando onde queremos que ele fique posicionado, fazemos isso dando os valores abaixo. */
+    position: absolute;
+    top: 110px;
+    right: 0;
+}
+
+nav li {
+    display: inline;
+    margin: 0 0 0 15px;
+}
+
+nav a {
+    /* Esta atribição transforma o texto para que ele fique todo em maiúsculo. */
+    text-transform: uppercase;
+    color: #000000;
+    /* Esta atribuição aplica o efeito de negrito no texto através de *weight* (peso da fonte). */
+    font-weight: bold;
+    font-size: 22px;
+    /* Este atributo serve para retirar o efeito de sublinhado do link. */
+    text-decoration: none;
+}
+
+/* À seguir, temos um exemplo de como editar um elemento do HTML com uma edição de CSS para que ele seja resposivo, neste caso, com a indicação abaixo, temos *nav a:hover* isso significa que quando o mouse estiver encima de uma das tags de link que está dentro da tag *nav* então, ocorrerá um comportamento que ainda iremos mapear (este *:hover* é o responsável por saber se o mouse está ou não por cima do elemento) */
+nav a:hover{
+    color: #c78c19;
+    /* Nesta atribuição, indicamos que queremos o texto em sublinhado. */
+    text-decoration: underline;
+}
+
+.produtos {
+    width: 940px;
+    margin: 0 auto;
+    padding: 50px 0;
+}
+
+.produtos li {
+    /* Na atribuição abaixo, mudamos o tipo de comportamento do elemento, em vez de ser em block (teria uma quebra de linha pra cada elemento) modificamos para *inline-block* (faz com que os elementos sejam posicionados na mesma linha um ao lado do outro, e também podemos mudar o tamanho da proporção do mesmo tanto na altura como largura). */
+    display: inline-block;
+    text-align: center;
+    width: 30%;
+    /* Nesta atribuição, indicamos que queremos que todo o conteúdo no navegador seja alinhado ao topo através do valor *top*. (por padrão, o navegador alinha tudo de baixo para cima). */
+    vertical-align: top;
+    margin: 0 1.5%;
+    padding: 30px 20px;
+    /* Na propriedade abaixo, nós mudamos a forma de como o navegador pensa para que o espaçamento lateral esteja dentro do percentual indicado no *width*, fazendo isso em vez do navegador somar os valores de *width* e de *padding* ele apenas utiliza como base o tamanho de *width* para redimencionar o conteúdo marcado. */
+    box-sizing: border-box;
+    /* Na atribuição a seguir, indicamos que queremos uma borda de 2 pixels solida na cor preta em volta dos elementos referidos, por padrão, as bordas ficam posicionadas entre o *padding* e o *margin* */
+    border: 2px solid #000000;
+    /* Através da propriedade à seguir podemos criar bordas arredondadas (isso e aplicável apenas no CSS*3) usando como valor o raio de um circulo criado teoricamente pelo navegador para então substituir as bordas retas pelas arredondadas (podemos usar apenas 1 valor que aplicará o raio em todos os 4 cantos da borda ou podemos usar 4 valores diferentes para dar estilos em cada canto editado, lembrando q o primeiro valor e do canto superior esquerdo o segundo é do canto superior direito, o terceiro é do canto inferior esquerdo e o quarto é do canto inferior direito ex: *border-radius: 10 30 50 70;* ). */
+    border-radius: 10px;
+}
+
+.produtos li:hover {
+    border-color: #c78c19;
+}
+
+/* À seguir, temos outra forma de verificar se está ocorrendo um comportamento do usuário para aplicarmos efeitos visuais, através da verificação *active* podemos saber se aquele elemento está sendo clicado (ativado) se sim, será aplicado a edição que mapearmos a seguir. */
+.produtos li:active {
+    border-color: #088c19;
+}
+
+/* É importante lembra que, quando um elemento já tem uma edição anterior e queremos modificar essa edição, precisamos citar qual é o elemento que receberá esta mudança após o código que verifica se o mouse está por cima do elemento *:hover* segue a tradução do código a seguir (no código abaixo, estamos dizendo ao CSS que queremos alterar a tag *h2* se o mouse estiver posicionado encima de uma das tags *li* da seção de classe *produtos*) */
+.produtos li:hover h2 {
+    font-size: 34px;
+}
+
+.produtos h2 {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.produto-descricao {
+    font-size: 18px;
+}
+.produto-preco {
+    font-size: 22px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+footer {
+    text-align: center;
+
+    /* Na propriedade abaixo, estamos indicando que queremos como fundo na nossa página uma imagem, e para isso usamos a propriedade *background* com o valor *url(***);* e que onde está os asteríscos é onde iremos indicar o "caminho" da imagem usando seu nome. (Por padrão, quando usamos uma imagem como fundo no CSS, ele automaticamente replica esta imagem para que ela ocupe toda a largura daquele bloco). */
+    background: url(bg.jpg);
+    padding: 40px 0;
+}
+
+.copyright {
+    color: #FFFFFF;
+    font-size: 13px;
+    margin: 20px 0 0;
+}

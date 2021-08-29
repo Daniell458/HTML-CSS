@@ -1,0 +1,16 @@
+    Quando estamos desenvolvendo um projeto, seja a linguagem que for, no navegador existe o "developer tools", nesta 
+ferramenta é possível ver um escopo de tudo que está sendo colocado lá, desde o que é visível ao usuário ao que não é.
+    Dito, para acessar esta ferramenta muito importante para o entendimento de tudo que está sendo desenvolvido no 
+projeto, podemos aperta a tecla (F12) já no navegador e então o mesmo abrirá uma janela com algumas informações.
+    Nesta janela, está disponível o console que serve para vermos tudo que é processado (normalmente usado com
+JavaScripty), tem também outras guias como: Elementos, Fontes, Rede, Desempenho, Memória, Aplicativo, Segurança e Lighthouse.
+    Por padrão, os navegadores quando carregam um arquivo/documento, ele já tem previamente uma configuração base de 
+CSS em funcionamento, configuração essa que pode acabar interferindo negativamente nos projetos pois ela inflige diretamente na parte visual do navegador, e por isso ser muito comum, desenvolvedores se juntaram e criaram um arquivo capaz de "zerar" todo o CSS do navegador para então termos apenas o nosso arquivo CSS em funcionamento, este arquivo de *reset.css* deve ser baixado e linkado com a página HTML com a tag posicionada anteriormente da tag que linka o arquivo de CSS que quisermos utilizar, se fizer o contrário, todo o nosso arquivo será zerado.
+    Os elementos no HTML por padrão seguem um tipo de posicionamento na página chamado de *static* (estático), esse 
+comportamento faz com que o elemento fique preso naquele local de origem de acordo com a estrutura HTML, mas podemos mudar issom.
+    Existem 3 tipos de comportamentos aplicáveis, o primeiro como já dito é o *static* que faz com que o elemento fique
+ posicionado fixamente naquele local, o segundo é o relativo, neste podemos modificar o posicionamento do elemento usando como relação o ponto incial do mesmo, ou seja ele ainda terá um ponto fixo inicial, e o terceiro é o comportamento de posicionamento absoluto, neste podemos colocar o elemento em questão em qualquer lugar da página e o mesmo não terá um ponto inicial pois o ponto inicial seremos nós mesmos que definiremos.
+    É possível fazer com que comportamentos como o do mouse sejam capturados pelo CSS para aplicarmos efeitos visuais 
+diferentes, umas das formas de fazer isso é usando o comportamento *:hover* que verifica se o mouse está por cima da tag em questão e se tiver aplica os efeitos mapeados naquela tag no arquivo CSS.
+    Existe um site com códigos para aplicarmos simbolos e caracteres especiais em nosso código de diferentes maneiras, 
+tais como: forma de código HTML, código CSS, nome de entidade, etc... * O link desse site é: ( https://unicode-table.com/pt/ ).
