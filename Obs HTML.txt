@@ -1,0 +1,147 @@
+    Quando estamos desenvolvendo um projeto, seja a linguagem que for, no navegador existe o "developer tools", nesta 
+ferramenta é possível ver um escopo de tudo que está sendo colocado lá, desde o que é visível ao usuário ao que não é.
+    Essa ferramenta é muito importante para o entendimento de tudo que está sendo desenvolvido no projeto e para
+acessa-la, podemos apertar a tecla (F12) com o navegador aberto e então o mesmo abrirá uma janela com algumas informações.  Nesta janela, está disponível o console que serve para vermos tudo que é processado (normalmente usado com
+JavaScripty), tem também outras guias como: Elementos, Fontes, Rede, Desempenho, Memória, Aplicativo, Segurança e Lighthouse.   Nela também é possível fazer rascunhos de alterações que são descartadas ao recarregar a página.
+
+    A tag: <DOCTYPE html> é usada para definir o tipo de documento e a versão do mesmo, no caso do HTML5, não é
+necessário colocar o número 5 pois o navegador já o executa como a versão mais recente usando apenas *html*.
+
+    No atributo da tag: <html lang="pt-br">  passamos para o navegador o idioma em que estamos trabalhando no documento,
+isso facilita para outro DEV caso ele faça manutenção na página, ele pode alterar para o seu idioma.
+
+    Dentro da tag: <head> colocamos tudo que for informação para o navegador, desde o logotipo que fica na aba do
+navegador até links com documentos de estilos como o CSS.
+
+    A tag: <meta charset="UTF-8>  é usada junto com o atributo *charset* (como no exemplo), para definir o conjunto de
+caracteres que iremos trabalhar, o mais comum é o unicode 8: "UTF-8".
+
+    A tag: <title> faz a alteração do nome da página na aba do navegador.
+
+    Através da tag: <link> fazemos uma conexão com um outro arquivo dentro da pasta em que estamos trabalhando, isso é
+comum ao usar um arquivo CSS externo, pois fica mais legível o código. as instruções que devem ser passadas são: (*rel=""* que especifíca a relação entre os arquivos, no caso de um arquivo CSS externo ele recebe como valor "stylesheet") & (href="" ela serve para localizar o arquivo á ser linkado através de seu nome).
+
+    Uma das formas de criar estilos CSS é através da tag: <style> que nos permite fazer todo o CSS dentro desta tag
+porém não é recomendado.  Outra forma de fazermos edições CSS é através do modelo ("inline" este modelo altera apenas a tag em questão), para isso usamos dentro do elemento que quermos modificar o atributo (*style=""* este atributo recebe como valores quais propriedades do elemento queremos alterar, exemplo: <p style="color: red;"> ).
+
+    Nós podemos criar identificadores para especificarmos tags do HTML para podermos citá-las em edições no CSS por
+exemplo podendo assim aplicar efeitos apenas naquela tag com o identificador, isso evita que as demais tags iguais recebam a mesma modificação, para criar os indetificadores usamos o atributo : (*id=""*) dentro da tag e damos um nome qualquer entre as áspas (LETRAS MINÚSCULAS E SEM ACENTOS!). 
+    Para nos referenciar-mos a este *id* no arquivo CSS por exemplo, devemos usar o *#* seguido do nome dado ao *id*
+exemplo no HTML: <p id="texto"> & exemplo no CSS: #texto {}.  
+**Obs: O atributo *id* somente pode ser usado em 1 tag de cada vez, sendo assim para usar a mesma edição de CSS em outras tags usamos as classes.
+
+    As classes são usadas quando queremos generalizar algo, como por exemplo quando queremos replicar em várias tags uma
+edição de CSS, para criar uma classe devemos usar o atributo: (*class=""*) dentro da tag e damos um nome entre as áspas (LETRAS MINÚSCULAS E SEM ACENTOS!).
+    Para nos referenciar-mos a esta *class* no arquivo CSS por exemplo, devemos usar o *.* seguido do nome dado à
+*class*, exemplo no HTML: <p class="texto"> & exemplo no CSS: .texto {}.
+
+    Dentro da tag: <body> colocamos todo o conteúdo que será apresentado visivelmente na página do navegador.
+
+    A tag: <header> é uma forma semântica exclusiva da útima versão do HTML que permite criar um cabeçalho apartir dela,
+isto é, podemos dividir melhor o nosso código e deixa-lo mais legível.
+
+    As tags utilizadas para criarmos títulos são: <h1>, <h2>, <h3>, <h4>, <h5>, <h6>, elas tem como diferença entre elas
+a enfase do texto sendo o <h1> com maior enfase e o <h6> com menor enfase.
+
+    As tags: <p> são as tags de parágrafos, nelas nós podemos colocar tudo que quisermos que seja texto.
+
+    Nós podemos criar listas em nossa página através das tags: (<ul> *unordered list* são as listas não ordenadas usadas
+quando a ordem da lista não importa), (<ol> *ordered list* são usadas quando a ordem da lista importa), dentro dessas tags usamos ainda outra para criar-mos o conteúdo da lista, esta é a tag: <li>.
+
+    Na tag: <img> podemos linkar uma imagem que esteja dentro de nossa pasta, para isso usamos o atributo (*src=""*
+que sifnifica: source = fonte) e recebe como valor o nome da imagem.
+
+    Para deixar nosso conteúdo bem dividido semânticamente, usamos a tag: <main> para delimitar todo o conteúdo príncipal
+de nossa página.
+
+    As tags: <div> são usadas para criar divisões no código, de forma que os conteúdos fiquem melhor distribuídos e mais
+legíveis para quem lê.
+
+    As tags: <nav> são outra forma de deixar-mos nosso código com uma semântica melhor e deixa-lo mais legível, esta
+serve para nos referir á menus de navegação por exemplo.
+
+    A tag: <footer> é usada para criarmos o rodapé de nossa página.
+
+    Os elementos no HTML por padrão seguem um tipo de posicionamento na página chamado de *static* (estático), esse 
+comportamento faz com que o elemento fique preso naquele local de origem de acordo com a estrutura HTML, mas podemos mudar isso através do CSS com a propriedade *position*.   Existem 3 tipos de comportamentos aplicáveis, o primeiro como já dito é o *static* que faz com que o elemento fique posicionado fixamente naquele local, o segundo é o relativo, neste podemos modificar o posicionamento do elemento usando como relação o ponto incial do mesmo, ou seja ele ainda terá um ponto fixo inicial, e o terceiro é o comportamento de posicionamento absoluto, neste podemos colocar o elemento em questão em qualquer lugar da página e o mesmo não terá um ponto inicial pois o ponto inicial seremos nós mesmos que definiremos.
+
+    É possível fazer com que comportamentos como o do mouse sejam capturados pelo CSS para aplicarmos efeitos visuais 
+diferentes, umas das formas de fazer isso é usando o comportamento *:hover* que verifica se o mouse está por cima da tag em questão e se tiver aplica os efeitos mapeados naquela tag do arquivo CSS.
+
+    Existe um site com códigos para aplicarmos simbolos e caracteres especiais em nosso código de diferentes maneiras, 
+tais como: forma de código HTML, código CSS, nome de entidade, etc... * O link desse site é: ( https://unicode-table.com/pt/ ).
+
+    Um formulário no HTML pode ter várias utilizações, dentre elas estão: Envio de dados do usuário para algum servidor,
+informções de login, troca de e-mails, transições entre páginas da WEB entre outros.    A tag para esse conteúdo é a:
+<form>.
+
+    Para inserir um campo de entrada na nossa página usamos a tag: <input>.
+
+    Sempre que quisermos especificar para o usuário o que queremos que ele insira no input, devemos usar a tag: <label>
+que funciona como uma etiqueta, devemos colocar nela o atributo: (*for=""*)  e usamos como valor o nome do identificador do input para indicar qual <input> essa etiqueta está sendo declarada, e ao clicar do usuário no elemtno <label> o foco de digitação vai para o <input> especificado.
+
+    Todo formulário, obrigatóriamente terá um <input> exclusivamente para enviar os dados passados pelo usuário, este
+<input> deverá receber o atributo: (*submit* = enviar em português).
+    É possível exibir um nome específico neste botão de "enviar", para isso usamos o atributo: (*value=""* ele recebe
+como valor o nome que queremos apresentar no botão).
+
+    A tag <textarea> serve para quando queremos que o usuário nos retorne algum texto complexo/livre, seja um
+comentário, uma opnião, sugestão, etc...    Ele nos permite delimitar a área de conteúdo no próprio navegador mas também é possível configurar isto através do código tanto por atributos diretamente na tag quanto pelo arquivo de CSS.  Existem várias tags *input's* diferentes com finalidades diferentes, basta usar a certa para cada sintaxe.
+
+    Nesta explicação, temos um novo tipo de <input> desta vez o: <input type="radio"> que tem como finalidade autorizar
+a seleção de apenas 1 opção entre diversas outras, para isso, todas as opções devem estar ligadas em conjunto através do atributo: *name* diretamente na tag, isso fará com que apenas 1 das opções possa ser selecionada por vez.
+
+    No site : ( http://mobileinputtypes.com/ ) é possível vermos como ficará os diferentes tipos de tag's <input> na
+versão do navegador de celular, facilitando para que nós usemos a melhor possível, dito isso devemos usar a semântica correta para o código para que o mesmo seja o mais efetivo possível, exemplo: quando colocamos o atributo (*type="email"*) na tag <input> dizemos que esperamos que o usuário digite um email neste campo e se o mesmo for inválido o site acusará que não existe.
+
+    Podemos tornar as tag's <input> obrigatórias, ou seja, quando num formulário, o usuário deve preencher todos os
+campos para que então o mesmo seja concluído.   Para isso, usamos atributo: (*required* = obrigatório em português) na tag <input> desejada, isso faz com que aquele <input> deva obrigatóriamente preenchido pelo usuário.
+
+    Para deixar-mos aquela sugestão translúcida para o usuário dentro da caixa de entrada usamos o seguinte atributo:
+(*placeholder="" * ela faz com que criemos aquele texto na caixa enquanto não há nenhum dado escrito e quando for colocado dados neste campo a sugestão desaparece), a mensagem que queremos deixa na caixa de entrada e dada como valor à este atributo.
+
+    Quando queremos que uma caixa de seleção seja assinalada assim que a página for carregada usamos o atributo:
+(*checked* isto fará a seleção automaticamente da caixa), dentro da tag <input> que queremos que seja assinalada.
+
+    A tag: <fieldset> é usada da mesma forma que a <div> mas com uma semântica mais específica, isso quer dizer que
+usamos ela para nos referir a grupos de códigos que se trata de assuntos específicos tais como dados de cartão de crédito, endereços, formulários como o que estamos desenvolvendo etc.    Quando usamos a tag: <fieldset> não usamos paragrafos dentro dela pois existe uma tag específica para titúlos nesta ocasião, se trata da tag: <legend>.
+
+    Para melhorar a acessibilidade de nosso site, quando temos uma imagem e queremos destacar a existência da mesma para
+o usuário, usamos o atributo: (*alt* isto dá uma descrição do que era pra ser exibido caso a imagem não seja carregada na página).
+
+    No CSS 3, é muito mais prático fazer uma mudança de escala, mudança essa que nas versões anteriores eram muito
+complicadas por exigirem diversos cálculos, mas nesta versão podemos fazer essas tranformação através da propriedade (*transform: scale();* nela nós indicamos como queremos que aconteça a mudança e damos o valor da proporção desta mudança dentro dos parenteses, exemplo: (*transform: scale(1.2)*   aqui indicamos que queremos uma transformação em escala e que deve ser de (20%) do seu tamanho original). (1.2 = 20%).
+
+    No CSS 3, é possível fazer um efeito de transição de cor para que fique mais perceptíve a mudança de cor que
+colocamos quando o mouse estiver por cima do elemento, para isso usamos a propriedade: (*transition: X Y; *  damos à ela como valor quanto tempo queremos que dure essa transição no lugar de *X* e qual propriedade será afetada no lugar de Y).
+
+    Com a propriedade *cursor: pointer;*, fazemos com que o ponteiro do mouse se transforme na mãozinha quando estiver
+por cima do elemento citado indicando que ele é clicável.
+
+    A tag: <table> é usada para criarmos tabelas iguais as do Excel em nosso código, a forma de desenvolvermos suas
+linhas é diferente e usamos uma tag específica para isso.
+    A tag <tr> é o elemento que usamos para criar linhas dentro da tag <table>.
+    As tag's <td> são as células da nossa tabela que iremos colocar todo nosso conteúdo, cada uma dessas tag's são
+colunas que ficam uma ao lado das outras que estiverem na mesma linha.
+    
+    No HTML5, temos como melhorar a sintaxe da nossa tabela ordenando a mesma com tag's específicas que são elas: 
+<thead> = O cabeçalho, <tbody> = O corpo, <tfoot> = O rodapé.
+    Podemos indicar que a nossa célula representa um cabeçalho através da tag <th>.
+
+    As tabelas também nos oferecem a possibilidade de mesclar células e montar um visual diferente. Por exemplo,
+quando uma linha, que deveria ter 5 células, passa a mostrar só "uma célula".
+    Esse efeito é conseguido através da propriedade: (*colspan=X* onde X é o número de células que você quer mesclar.  Portanto, em uma tabela
+de 5 colunas, para ter uma célula única na linha, usamos um código assim:   
+<td colspan="5">....</td>.
+
+    Para colocarmos um mapa em nossa página, devemos ir no: ( https://www.google.com/maps ), pesquisarmos o local que
+queremos colocar em nossa página e em seguida vamos no menu do maps e lá teremos a opção que vamos selecionar: *compartilhar ou incorporar mapa*, na caixa de diálogo que aparecerá vamos clicar em *incorporar um mapa* e em seguida clicaremos em *copiar HTML*, feito isso nós iremos em nosso código e iremos colar o elemento copiado no local onde desejamos que o mapa fique (atenção na estrutura!).
+    Resumindo tudo, através da tag: <iframe> e dos atributos que contém nela que são: (*src=""* aqui colocamos o
+endereço da página do google maps) (*width=""* aqui damos o tamanho da largura do mapa) (*height=""* aqui damos o tamanho da altura do mapa) (*style=""* aqui damos um estilo para a janela que ficará o mapa "uma borda por exemplo") (*allowfullscreen=""*) (*loading=""*)
+
+    A tag: <iframe> pode ser usada para criarmos uma janela com o conteúdo que quisermos dentro, desde um vídeo até uma
+página de Facebook desde que este serviõ esteja disponível.    Nós dizemos qual será o conteúdo desta janela através do atributo: *src=""* e damos como valor o link da página que queremos que apareça na janela.
+    
+    Hoje em dia, é trivial que nosso site seja responsívo e adaptável a qualquer tamanho e tipo de tela, para isso
+usamos a DEVtoll no navegador com a ferramenta de "emulação de dispositivo" e também usamos no HTML a tag: <meta> com as propriedades: ( *name="viewport"* & *content="width=device-width* a primeira significa a área que será exibida nossa página, viewport nada mais é do que toda aquela parte branca do navegador quando o abrimos, a segunda nos indica o tamanho que o 'viewport' terá, ele pode conter os seguintes valores: ( *width=00px ou width=device-width* no primeiro nós podemos indicar a largura do nosso navegador em pixels porém é muito impreciso dessa forma, já segunda por sua vez pegamos o tamanho da largura da tela que está sendo utilizada e automaticamente a página é ajustada, essa é a forma mais utilizada), ( *height=00px ou height=device-height* aqui se aplica o mesmo conceito da explicação acima, o que muda é que envez de modificar a largura estamos mexendo na altura), ( *initial-scale=1* permite que nós possamos definir a escala inicial da 'viewport', isso é passado como valor em números racionais), ( *user-scalable=no* essa propriedade permite que o usuário faça zoom na página ao clicar 2 vezes em algum lugar da tela, quando atribuimos o valor "no" estamos retirando essa possibilidade).
+    Feito isso precisamos ainda adaptar nossa página para essas telas no CSS. "line-179-CSS-note".

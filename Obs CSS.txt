@@ -1,0 +1,182 @@
+    Uma convenção sobre o uso do CSS e suas classes é sempre usarmos nomes genericos mas especificos, deixando assim
+nosso código com uma melhor semântica.
+    
+    No CSS cada um dos marcadores tem uma determinada força, isto tem impacto direto na hora do navegador decidir qual
+estilo aplicar caso o mesmo esteja repetido, as forças são: uma tag = 1F, 1 classe = 10F, 1 identificador = 100F, 
+CSS inline = 1000F. Sendo que F = total de força daquele marcador, esses valores são somados quando estão em conjunto, exemplo: p, .p= 11F, porque o marcador *p* tem 1F e o marcador *.p* tem 10F, ou seja, 1F + 10F = 11F.
+
+    Para nos referenciar-mos a este *id* no arquivo CSS por exemplo, devemos usar o *#* seguido do nome dado ao *id*
+exemplo no HTML: <p id="texto"> & exemplo no CSS: #texto {}.
+
+    Para nos referenciar-mos a esta *class* no arquivo CSS por exemplo, devemos usar o *.* seguido do nome dado à
+*class*, exemplo no HTML: <p class="texto"> & exemplo no CSS: .texto {}.
+
+    Por padrão, os navegadores quando carregam um documento, ele já tem previamente uma configuração base de CSS em
+funcionamento, configuração essa que pode acabar interferindo negativamente nos projetos pois ela inflige diretamente na parte visual do navegador, e por isso ser muito comum, alguns desenvolvedores se juntaram e criaram um arquivo capaz de "zerar" todo o CSS do navegador para então termos apenas o nosso arquivo CSS em funcionamento, este arquivo chamado de *reset.css* deve ser baixado e linkado na página HTML, esta tag deve estar posicionada antes da tag que linka o arquivo de CSS que qvamos utilizar, se fizer o contrário, todo o nosso arquivo será zerado.
+
+    Os elementos no HTML por padrão seguem um tipo de posicionamento na página chamado de *static* (estático), esse 
+comportamento faz com que o elemento fique preso naquele local de origem de acordo com a estrutura HTML, mas podemos mudar isso através do CSS com a propriedade *position*.   Existem 3 tipos de comportamentos aplicáveis, o primeiro como já dito é o *static* que faz com que o elemento fique posicionado fixamente naquele local, o segundo é o relativo, neste podemos modificar o posicionamento do elemento usando como relação o ponto incial do mesmo, ou seja ele ainda terá um ponto fixo inicial, e o terceiro é o comportamento de posicionamento absoluto, neste podemos colocar o elemento em questão em qualquer lugar da página e o mesmo não terá um ponto inicial pois o ponto inicial seremos nós mesmos que definiremos.
+
+    É possível fazer com que comportamentos como o do mouse sejam capturados pelo CSS para aplicarmos efeitos visuais 
+diferentes, umas das formas de fazer isso é usando o comportamento *:hover* que verifica se o mouse está por cima da tag em questão e se tiver aplica os efeitos mapeados naquela tag do arquivo CSS.
+
+    Existe um site com códigos para aplicarmos simbolos e caracteres especiais em nosso código de diferentes maneiras, 
+tais como: forma de código HTML, código CSS, nome de entidade, etc... * O link desse site é: ( https://unicode-table.com/pt/ ).
+
+    Quando temos uma configuração de CSS para um elemento e queremos replica-la para outros, não precisamos criar uma
+nova linha de código, basta adicionar uma vírgula após o nome do elemento e digitar o outro elemento ou identificador ou classe que queremos aplicar aquela edição ou apenas criar classes e repeti-las nas tags do HTML.
+
+    No CSS 3, é muito mais prático fazer uma mudança de escala, mudança essa que nas versões anteriores eram muito
+complicadas por exigirem diversos cálculos, mas nesta versão podemos fazer essas tranformação através da propriedade (*transform: scale();* nela nós indicamos como queremos que aconteça a mudança e damos o valor da proporção desta mudança dentro dos parenteses, exemplo: (*transform: scale(1.2)*   aqui indicamos que queremos uma transformação em escala e que deve ser de (20%) do seu tamanho original). (1.2 = 20%).
+
+    No CSS 3, é possível fazer um efeito de transição de cor para que fique mais perceptíve a mudança de cor que
+colocamos quando o mouse estiver por cima do elemento, para isso usamos a propriedade: (*transition: X Y; *  damos à ela como valor quanto tempo queremos que dure essa transição no lugar de *X* e qual propriedade será afetada no lugar de Y).
+
+    Com a propriedade: *cursor: pointer;* fazemos com que o ponteiro do mouse se transforme na mãozinha quando estiver
+por cima do elemento citado indicando que ele é clicável.
+
+    Na propriedade: *width: 100%*  declaramos que a largura do elemento deve se ajustar á 100% da tela independentemente
+do tamanho da mesma. 
+
+    Na propriedade: (*margin:* cria uma margem em volta do elemento referido ou, se for *margin-left:* cria uma margem á
+esquerda do elemento e assim com todos os sentidos se citados: *left* *right* *top* *bottom*).
+    Esta propriedade também pode ser mapeada através de valores como pixels, porcentagem etc...
+    Quando damos 1 valor para a propriedade, exemplo: *margin: 20px* aplicamos 20px de margem para todos os lados.
+    Quando damos 2 valores para a propriedade, exemplo: *margin: 10px 20px* no primeiro valor dizemos que o topo e a
+base terá 10px de margem (valor vertical) e o segundo ser refere as laterais que teram 20px de margem (valor horizontal).
+    Quando damos 3 valores para a propriedade, exemplo: *margin: 10px 15px 20px* o primeiro valor se refere ao topo, o
+segundo se refere as laterais (valor horizontal), e o terceiro se refere a base do elemento.
+    Quando damos 4 valores para a propriedade, exemplo: *margin: 5px 10px 7px 20px* no primeiro estamos nos referindo
+a parte do topo, no segundo estamos nos referindo ao canto direito, no terceiro nos referimos à parte inferior, e no quarto nos referimos ao canto esquerdo.
+
+    Na propriedade: (*padding* cria um espaçamento interno no elemento referido para que ele se ajuste á posição
+solicitada, esta propriedade também pode variar em direções assim como o *margin*).
+
+    Por padrão, o  HTML organiza as tags linha por linha com um comportamento chamado *block* isto é, ele realmente
+bloqueia outros elementos naquela linha no intuito de ter uma melhor formalização.
+    Também existe o comportamento *inline*, neste significa que os conteúdos dentro daquela tag ficaram na mesma linha.
+    Nós podemos mudar isso, para isso precisamos adicionar na edição do marcador do CSS o atributo: (*display: X* no
+lugar de X nós damos o valor "inline-block", usamos esse comportamento para colocar uma imagem na mesma linha de um paragrafo ou listas por exemplo).
+    *Obs: Quando usamos o valor *inline-block* na propriedade acima, temos que nos atentar a estrutura do HTML pois para que determinados
+elementos fiquem na mesma linha ocupando 100% da página é necessário que eles estejam colados um ao lado do outro no HTML.
+    **Obs: Por padrão, o CSS alinha todos os itens para baixo, sendo assim ficará estranho se colocarmos uma imagem ao
+lado de uma lista pois a lista ficará lá embaixo, para concertarmos isto, usamos o atributo *vertical-align* para indicar onde querermos alinhar o conteúdo podendo ter como valor: "top" "bottom" "right" "left".
+
+    É possível mudar a posição de elemento através da propriedade: *position:* Os 3 valores mais comuns para esta
+propriedade são: ("static" este é o padrão que já é adotado automaticamente), ("relative" este é dado quando queremos fazer referencia a uma posição de algum outro elemento, podemos especificar isso através de outras propriedades abaixo desta dando posições em pixels por exemplo) e ("absolute" este é usado quando queremos criar um ponto inicial para o elemento, podemos colocar o elemento em qualquer lugar de nossa página através de coordenadas em pixels).
+
+    Usamos a propriedade: *text-transform: uppercase* para que o texto da marcação fique todo em maiúsculo.
+
+    A propriedade: (*weight* peso da fonte) é usada em conjunto com o valor "bold" para aplicar o efeito de negrito no
+texto.
+
+    A propriedade: *text-decoration:* em conjunto com o valor "none" serve para retirar o efeito de sublinhado do links
+por exemplo.
+
+    Aqui temos um exemplo de como deixar um elemento do HTML resposivo para que aplique determinadas edições quando
+ocorrer o evento.   Para isso usamos a indicação do que esperamos que aconteça do lado da marcação da tag para capturar o evento, exemplo: (*div:hover* esse evento "hover" indica que quando o mouse estiver encima da tag citada: <div> ocorrerá o comportamento que mapearemos com propriedades). (O ":hover" é o responsável por saber se o mouse está ou não por cima do elemento).
+
+    Na propriedade: *text-decoration:* em conjunto com o valor "underline" indicamos que queremos o texto em sublinhado.
+
+    Na propriedade: *box-sizing: border-box;* nós mudamos a forma de como o navegador pensa para que o espaçamento
+lateral esteja dentro do percentual indicado no *width*, fazendo isso, em vez do navegador somar os valores de *width* e de *padding* ele apenas utiliza como base o tamanho de *width* para redimencionar o conteúdo marcado.
+
+    Na propriedade: *border: 2px solid #000000;* indicamos que queremos uma borda de 2 pixels, com aspecto sólido e na
+cor preta em volta do elemento marcado.    Por padrão, as bordas ficam posicionadas entre o *padding* e o *margin*.
+
+    Através da propriedade: *border-radius:* podemos criar bordas arredondadas (isso e aplicável apenas no CSS*3) usando
+como valor o raio de um circulo criado teoricamente pelo navegador para então substituir as bordas retas pelos cantos arredondados (podemos usar apenas 1 valor que aplicará o raio em todos os 4 cantos da borda ou podemos usar 4 valores diferentes para dar estilos em cada canto editado, lembrando q o primeiro valor e do canto superior esquerdo o segundo é do canto superior direito, o terceiro é do canto inferior esquerdo e o quarto é do canto inferior direito
+Exemplo: *border-radius: 10 30 50 70;* ).
+
+    Através da propriedade: *:active* podemos saber se aquele elemento está sendo clicado (ativado) se sim, será
+aplicado a edição que mapearmos dentro da marcação. (Lembrando que essa propriedade é colocada ao lado da marcação da tag no CSS).
+    É importante lembrar que, quando um elemento já tem uma edição anterior e queremos modificar essa edição, precisamos
+citar qual é o elemento que receberá essa mudança após o código que verifica se o mouse está por cima do elemento *:hover*.
+
+    Na propriedade: *background: url(X);* estamos indicando que queremos como fundo na nossa página uma imagem, Para
+isso usamos a propriedade acima e no lugar de *X* damos como valor o nome da imagem que queremos aplicar. (Por padrão, quando usamos uma imagem como fundo no CSS, ele automaticamente replica esta imagem para que ela ocupe toda a largura daquele bloco).
+
+    No CSS 3, é possível fazer um efeito de transição de cor para que fique mais perceptível a mudança de cor que
+mapearmos para quando o mouse estiver por cima do elemento, para isso usamos a propriedade: *transition* e damos à ela como valor quanto tempo queremos que dure essa transição e qual propriedade será afetada.
+
+    Uma forma de fazermos medidas proporcionais além da porcentagem, é usando o valor "em", neta unidade de medida
+podemos dizer que queremos o dobro do tamanho do elemento apenas dando o valor de "2em" (podemos fazer calculos com essa unidade de medida, a formula para isso é: tagert/context = em, ou seja, o valor do elemento pai - divido pelo valor do elemento que queremos modificar = é igual o valor da medida em *em*. Exemplo: 20/16 = *1.25em* sendo 20 o tamanho do elemetno pai *de um titulo por exemplo* 16 o tamanho padrão do elemento que queremos modificar *16px é o tamanho padrão de fontes de texto no navegador*).
+
+    Com a propriedade: *float:* fazemos com que o elemento marcado nesta propriedade flutue possibilitando assim o
+posicionamento de um texto ao redor deste elemento por exemplo. Nós damos como valor a esta propriedade o local onde queremos que o elemento que estará *flutuando* fique posicionado, exemplo: (*float: left;* o elemento flutando ficará na esquerda da página).
+    Sempre que usamos um *float* afetamos completamente a estrutura de nossa página, sendo assim, todos os elementos
+após o *float* subiram e em certos casos isso será um problema, para resolvermos isso é simples, basta adicionar a propriedade: (*clear:* damos como valor o posicionamento do *float*) adicionamos essa propriedade dentro do mapeamento do elemento que está sendo afetado pelo *float* indesejávelmente.
+
+    Existe dois tipos de fontes: fontes preparadas para WEB, e fontes não preparadas.   A diferença entre elas é que as
+fontes preparadas tem um comportamento muito semelhante nos navegadores isso faz com que a fonte fique o mais semelhante possível em navegadores diferentes, por outro lado as não preparadas nao tem esse aspecto acima e são normalmente usadas em impressões e trabalhos gráficos onde não será necessário essa mudança entre navegadores.
+    O site mais comum para fazermos buscas de fontes é o: ( https://fonts.google.com ).
+    Ao usar o site acima para fazer links com fontes externas, temos que colocar em nosso HTML na parte do cabeçalho <head> o link dado no
+campo "Veja suas fontes", e é importante que copiemos o link correto que nos dará como destino o estilo da fonte que selecionamos, do contrário a fonte não ficará como desejamos, alem disso, para que a fonte seja usada de fato também é necessário coloca-la nos mapeamentos do CSS nos elementos que desejarmos. 
+    Exemplo do HTML para a fonte *montserrat*: (<link href="https://fonts.googleapis.com/css2? família=Montserrat:wght@100&display=swap"
+rel="stylesheet"> lembrando que a parte em que está *css2* pode nos dar algum erro pois usamos a versão 3 do CSS, além disso, após a parte: *Montserrat:* até a parte anterior ao *&* é uma edição previamente colocada pelo desenvolvedor e que podemos tirá-la.
+    Exemplo do CSS para a fonte acima: ( h1 {font-family: 'Montserrat', sans-serif;} a fonte *sans-serif* é uma alternativa caso a fonte
+principal não seja executada em nossa página por algum erro.
+
+    Através da propriedade: *line-height: 1.5;* podemos mudar a altura das linhas entre os elementos, por padrão essa propriedade tem como
+valor 1, mas como no exemplo acima podemos modificar isso, no caso dizemos que queremos que a linha tenha 1,5 de altura.
+
+    É possível criarmos  "pseudo-elementos", essa técnica serve para nos ajudar quando queremos alterar apenas 1 item no CSS porem não
+queremos espelhar isso para os demais elementos com mesma marcação, para isso podemos usar o nome do elemento seguido de: (*:first-child* essa propriedade faz com que apenas o primeiro item "primeiro filho" daquela marcação seja alterado, exemplo: (*.lista:firt-child* nesta marcação dizemos que o primeiro item da lista "primeiro filho" seja alterado com o mapemento que fizermos entre as chaves *{}*).
+    Além do *:first-child* podemos também usar o *:last-child* isso é interessante para nós pois se estamos trabalhando com um código grande e
+ele tem vários itens daquele elemento por exemplo, nós não precisamos saber quantos itens no total tem aquele elemento, porque através da propriedade *:last-child* ele diretamente se refere ao "último filho" do elemento marcado.
+    Temos ainda outra possibilidade de fazermos uma edição em um item específico, que é através da propriedade: *:nth-child(X)*.    Desta vez
+temos como objetivo selecionar um dos itens através do valor que fica entre os (), para isso nós olhamos em qual posição se encontra o item que queremos modificar e colocamos este valor no lugar de *X*, exemplo: (.lista:nth-child(3) aqui dizemos que apenas o terceiro elemento da classe *.lista* será alterado pelo nosso mapeamento).   Com essa mesma propriedade é ainda possível fazermos a alteração em todos os elementos pares, exemplo: (*.lista:nth-child(2n) com essa propriedade dizemos que todos os elementos pares de nossa classe *.itens* serão afetados por nosso mapeamento).
+    É possível também fazermos um "pseudo-elemento" para manipular apenas determinado conteúdo do nosso elemento, um exemplo disso é quando
+queremos modificar apenas a primeira letra de determinado elemento, para fazermos isso nós utilizamos a seguinte propriedade: (*:first-letter* primeira letra) com essa propriedade, nós conseguimos editar apenas a primeira letra de todos os elementos marcados com esta propriedade.    Exemplo: ( *.titulo:firt-letter {font-weight:bold;} )   nesse exemplo nós estamos dizendo que queremos alterar a primeira letra de todos os elementos com a classe *.titulo* para que a mesma esteja em negrito.
+    Outro exemplo é se quisermos alterar a primeira linha de um texto, para fazermos isso nós usamos a propriedade: *:fist-line* nela todo o
+conteúdo da primeira linha de todos os elementos marcados por essa propriedade serão afetados pelo mapeamento.
+    Temos ainda outra possibilidade com os "pseudo-elementos", desta vez, nós podemos colocar o que quisermos antes e depois do elemento
+marcado, por exemplo: Para colocar uma classe de titulos entre conchetes *[]* fazemos: ( *.titulos:before { content: "["; }*, *.titulos:after { content: "]"; } ) assim dizemos no *:before* que antes do conteúdo da classe *.titulos* deve-se inserir um "[" como está nas áspas e no *:after* dizemos que depois do conteúdo de *.titulos* deve-se inserir um "]" como citado dentre as áspas do *:after*
+    *Obs: Nunca esquecer de colocar o atributo *content: "";* pois é através dele que passamos o que deve ser inserido.
+    **Obs: Todo o conteúdo que colocarmos nesta propriedade será apenas visual, o usuário não consegue selecionar nada do que inserirmos
+através desta técnica.
+    Continuando com esse conceito de seletores, podemos também selecionar um elemento "filho direto" de outro elemento.     Exemplo: 
+suponhamos que temos a seguinte estrutura: ( <main> <p> <section> <p> <p> <p> </section> </main> ) olhando para essa estrutura, dizemos que temos um paragrafo que é filho direto da tag <main>, porém, se formos mapear a tag <p> no CSS usando o seguinte seletor: ( main p {....} ) se usarmos essa forma todos os paragrafos que estão dentro da tag <main> serão modificados inclusive os dentro da tag <section>.     Para concertarmos isso, no CSS3 existe um tipo de seletor que nos permite marcar somente os "filhos diretos" da tag que desejamos, este seletor é:
+( main > p {...} ).
+    Podemos ainda selecionar uma tag <p> no meio de outras por exemplo, se temos a seguite estrutura: ( <section> <h2> <img> <p> <p> <
+section> ) apartir dessa estrutura se quisermos selecionar apenas a tag <p> que vem depois da <img> temos que usar o seguinte seletor no CSS:
+( img + p {...} ) aqui dizemos que o elemento <img> serve de âncora para chegarmos a tag <p>.
+    *Obs: essa técnica apenas selecionar 1 elemento "no caso 1 tag <p>".
+    Podemos também selecionar todas as tags <p> que vem depois do elemento <img> seguindo o exemplo acima, para isso, usamos o seguinte
+seletor: ( img ~ p {...} ) nesse seletor estamos dizenos que queremos mapear todas as <p> despois do elemento <img>.
+    Podemos ainda excluir certos elementos para fazermos um mapeamento coletivo, exemplo: se temos a seguinte estrutura: ( <section
+class="principal"> <h2> <img> <p> <p class="missao"> <p> <section> ) e queremos mapear todas as tags <p> menos a do id="missao", fazemos isso através do seletor:  ( .principal p:not(#missao) {...} ) nesse seletor dizemos que todos as tags <p> dentro da classe pai "principal" menos o paragrafo do id="missao" serão afetadas pelo mapeamento.
+
+    No CSS, podemos criar fundos com cores gradientes para dar um aspecto mais bonito à nossa página, para fazermos isso, uma das formas é
+usando a propriedade: *background:* em conjunto com o atributo: ( *linear-gradient(n-deg, X, Y, ...)  aqui estamos criando um gradiente linear)  e damos  como valor no lugar de *X, Y* de qual cor (X) para qual cor (Y) queremos que esse gradiente vá.     Exemplo: (*background: linear-gradient(orange, blue); aqui estamos dizendo que nosso gradiente começa no laranja e termina no azul).
+    *Obs: Podemos colocar na propriedade acima quantas cores quisermos, além disso, também podemos mudar o ângulo de radiação do nosso
+gradiente, para isso, nós damos mais um valor antes das cores, no lugar de *n-deg* nós damos o valor em graus acompanhado da sigla: (*deg* graus derivado do inglês).
+    **Obs: Podemos ainda mudar a proporção de distribuição das cores em nosso gradiente, para isso, nós damos o valor que queremos aplicar em
+*%* depois da definição da cor , exemplo: ( *background: linear-gradient(orange 40%, blue) aqui estamos dizendo que o laranja deve ir até 40% do elemento marcado).
+    ***Obs: Podemos também usar outros tipos de grandientes como o *radial* entre outros.
+
+    Na versão de CSS3 é possível fazermos calculos afim de entrarmos determinados valores dinâmicamente, para isso usamos a propriedade: (
+calc( X "operdador" Y); ) nesta propriedade no lugar de X colocamos o primeiro valor, no lugar do operdador colocamos o agente de operação: 
+(+, -, * ou /) e no lugar de Y o segundo valor, sempre colocando espaço entre o primeiro número o operador e o segundo número.
+    *Obs: é possível fazer quantos calculos quisermos com essa propriedade, basta seguir a regra matematica de colocarmos () para
+especificarmos qual operação será realizada primeiro.
+
+    É possível aplicarmos opacidade em qualquer elemento do nosso código através da propriedade: *opacity:* esta
+propriedade pode receber como valor um número de 0 (0% de visibilidade do elemento) á 1 (100% de visibilidade do elemento). Exemplo: ( *opacity: 0.5*  aqui dizemos que o elemento tem 50% de opacidade).
+    É possível também colocar opacidade em cores, para isso devemos mexer na propriedade *color:* do elemento que
+queremos, nesta propriedade devemos colocar o tipo de cor (R-G-B-A Red, Green, Blue, Alfa) para isso se a cor estiver em hexadecimal (#XX-XX-XX) devemos transforma-la para RGB (rgb(X,X,X) ) e em seguida transforma-la em RGBa (rgba(X,X,X,Y) ) aqui no lugar dos *X* colocamos a cor que queremos igual o RGB mas no lugar de *Y* colocamos o valor da opacidade que vai de 0 (mínimo visível) á 1 (máximo visível) exemplo: ( *color: rgba(0,0,0, 0.5)*  aqui dizemos que a cor será preta e que terá uma opacidade de 50%).
+
+    No CSS3 é possível adicionarmos sombra aos elementos, para isso usamos a propriedade: *box-shadow:* que recebe como
+valores vários parâmetros possíveis, os essenciais são: o primeiro e o segundo devem ser os valores de deslocamento do eixo X,Y ( aqui indicamos até onde queremos que a sombra se desloque );  A cor da sombra normalmente será o último valor que daremos (podendo ser hexadecimal, RGB etc);   Mas podemos também dar-lhe outros valores como o *blur* que faz com que a sombra fique com um desfoque e este deve ir como terceiro valor;    Também podemos ajustar a intensidade da sombra que modifica o quão forte é a mesma dando impressão de a luz estar bem perto do elemento, este é passado através do quarto valor;
+    Podemos também criar sombras internas aos nossos nossos elementos, para isso, no mapeamento da tag que desejamos
+aplicar este efeito, usamos a mesma propriedade da sombra: *box-shadow:* mas antes de atribuir os valores nós usamos outra propriedade que é a : *inset* esta fará com que a sombra seja projetada para dentro do elemento ( isso é muito útil para fazermos molduras por exemplo);     Nós damos como primeiro e segundo valor a esta propriedade o posicionamento da projeção dessa sombra que normalmente é 0 pois sombras internas não são deslocadas;   Como terceiro valor podemos colocar o espaçamento desta sombra para que ela seja visível, do contrário nada será apresentado na página;     Como último valor nós damos a cor desta sombra.
+Exemplo: ( *box-shadow: inset 0 0 20px #FF0000*   aqui dizemos que a sombra interna começará encima do elemento, terá um espaçamentode 20px para dentro do elemento e a cor sera vermelha ).
+    É possível também criarmos sombras nos textos, para isso, usamos a propriedade: *text-shadow:*, os valores dessa
+propriedadesão os mesmos usados para criara as sombras em elementos, o diferencial disso é que a sombra terá exatamente o formato das letras do texto aplicado.
+    *Obs: O interessante das sombras é que podemos colocar quantas sombras quisermos, para isso basta adicionarmos uma 
+vírgula *,* depois de todos os valores da propriedade *box-shadow:* isso nos permitirá colocar outra sombra naquele mesmo elemento.
+
+    Para personalizarmos as telas diferentes como de celulares por exemplo, além da tag criada no HTML:
+"line-145-HTML_note" precisamos mapea-la no CSS, para isso usamos a marcaçã: ( *@media screen and () {....}* essa marcação nos permite perguntar ao navegador qual tamanho de tela está sendo utilizada e se o tamanho for compatível ao que passamos entre os *()* ele aplica o mapeamento, exemplo: *@media screen and (max-width: 480px) {....}* aqui dizemos que se a tela for menor que 480px todo o mapeamento feito dentro das chaves dessa 'querie' será aplicado)
+    *Obs: Dentro das chaves dessa 'quereis' deve ser "refeito" todo o CSS para que a página fique bem apresentável ao
+usuário.
